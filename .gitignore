@@ -12,3 +12,5 @@ coverage
 .env
 
 /upload/
+/frontend/project/node_modules
+/frontend/markup

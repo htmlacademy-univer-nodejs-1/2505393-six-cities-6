@@ -15,12 +15,12 @@ import { CreateUpdateOfferMessage } from './update-offer.messages.js';
 
 export class UpdateOfferDto {
   @IsOptional()
-  @MinLength(10, { message: CreateUpdateOfferMessage.title.minLength })
+  @MinLength(1, { message: CreateUpdateOfferMessage.title.minLength })
   @MaxLength(100, { message: CreateUpdateOfferMessage.title.maxLength })
   public title?: string;
 
   @IsOptional()
-  @MinLength(20, { message: CreateUpdateOfferMessage.description.minLength })
+  @MinLength(1, { message: CreateUpdateOfferMessage.description.minLength })
   @MaxLength(1024, { message: CreateUpdateOfferMessage.description.maxLength })
   public description?: string;
 

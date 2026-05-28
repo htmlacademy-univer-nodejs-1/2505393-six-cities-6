@@ -13,11 +13,11 @@ import { OfferType } from '../../../types/index.js';
 import { CreateOfferValidationMessage } from './create-offer.messages.js';
 
 export class CreateOfferDto {
-  @MinLength(10, { message: CreateOfferValidationMessage.title.minLength })
+  @MinLength(1, { message: CreateOfferValidationMessage.title.minLength })
   @MaxLength(100, { message: CreateOfferValidationMessage.title.maxLength })
   public title: string;
 
-  @MinLength(20, {
+  @MinLength(1, {
     message: CreateOfferValidationMessage.description.minLength,
   })
   @MaxLength(1024, {
